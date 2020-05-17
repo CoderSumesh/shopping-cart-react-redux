@@ -1,0 +1,59 @@
+import React, { Component } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { Container, Row, Col } from 'react-bootstrap';
+
+import { Provider } from 'react-redux';
+import store from './store';
+
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import '../node_modules/font-awesome/css/font-awesome.min.css';
+import "./style.scss";
+
+import Routes from './Routes';
+import Header from './components/header';
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.nodes = [];
+  }
+
+  onUpdate = (data) => {
+    this.nodes = [...data];
+  };
+
+  saveData = () => {
+    console.log(this.nodes);
+  };
+
+  render() {
+    return (
+      <Provider store={store}>
+        <Router basename="product">
+          <Container fluid>
+            <Row>
+              <Col className="p-0">
+                <Header />
+              </Col>
+            </Row>
+            <Row
+              className="app-container"
+              style={{ height: 'calc(100vh - 80px)', overflowX: 'auto' }}
+            >
+              <Routes />
+            </Row>
+            <Row>
+              <Col className="p-0">
+                <div className="bg-primary text-white text-center">
+                  &copy;copyright
+                </div>
+              </Col>
+            </Row>
+          </Container>
+        </Router>
+      </Provider>
+    );
+  }
+}
+
+export default App;
