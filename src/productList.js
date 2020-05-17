@@ -33,6 +33,8 @@ const ProductList = (props) => {
   useEffect(() => {
     setPage('list');
     fetchProducts();
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -68,8 +70,6 @@ const ProductList = (props) => {
           item.price.actual <= filterValues.max
       );
     }
-
-    console.log(filterValues);
 
     setProductList([...data]);
   }, [sortType, products, searchText, filterValues]);

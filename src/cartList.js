@@ -5,15 +5,15 @@ import { Container, Row, Col } from 'react-bootstrap';
 import ProductCart from './components/productCart';
 import PricePayable from './components/pricePayable';
 
-import {
-  setPage,
-} from './store/actions';
+import { setPage } from './store/actions';
 
 const CartList = (props) => {
   const { setPage } = props;
 
   useEffect(() => {
     setPage('cart');
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

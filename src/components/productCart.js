@@ -84,6 +84,7 @@ const ProductCart = (props) => {
           </Card.Body>
         </Card>
       ))}
+      {!!!cart.length && <h6 className="text-center">Your cart is empty!</h6> }
     </Col>
   );
 };

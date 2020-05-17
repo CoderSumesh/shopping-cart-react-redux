@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom';
 import { Container, Row, Col } from 'react-bootstrap';
 
 import { Provider } from 'react-redux';
