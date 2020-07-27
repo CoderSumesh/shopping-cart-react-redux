@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import { HashRouter as Router } from 'react-router-dom';
 import { Container, Row, Col } from 'react-bootstrap';
 
-import { Provider } from 'react-redux';
-import store from './store';
+import Store from './store';
 
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/font-awesome/css/font-awesome.min.css';
@@ -28,7 +27,7 @@ class App extends Component {
 
   render() {
     return (
-      <Provider store={store}>
+      <Store>
         <Router basename="product">
           <Container fluid>
             <Row>
@@ -51,7 +50,7 @@ class App extends Component {
             </Row>
           </Container>
         </Router>
-      </Provider>
+      </Store>
     );
   }
 }

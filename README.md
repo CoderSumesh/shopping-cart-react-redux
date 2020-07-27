@@ -1,5 +1,5 @@
 
-## Assignment
+## Simple shopping cart using ReactJS and Redux
 
 In the project directory, you can run:
 

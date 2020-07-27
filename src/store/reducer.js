@@ -1,16 +1,6 @@
 import * as actionTypes from './actions';
 
-const initialState = {
-  isLoading: true,
-  products: [],
-  cart: [],
-  sortType: '',
-  searchText: '',
-  filterValues: { min: 1000, max: 100000 },
-  currentPage: 'list',
-};
-
-const reducer = (state = initialState, action) => {
+const reducer = (state = {}, action) => {
   switch (action.type) {
     case actionTypes.SET_PAGE: {
       return { ...state, currentPage: action.payload };
