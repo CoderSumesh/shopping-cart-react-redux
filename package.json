@@ -4,7 +4,7 @@
   "homepage": "https://codersumesh.github.io/shopping-cart-react-redux",
   "private": true,
   "dependencies": {
-    "axios": "0.19.2",
+    "axios": "1.6.0",
     "bootstrap": "4.5.0",
     "font-awesome": "4.7.0",
     "node-sass": "4.14.1",
